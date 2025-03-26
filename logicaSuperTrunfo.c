@@ -105,7 +105,8 @@ int main() {
     printf("3 - Área\n");
     printf("4 - Densidade Populacional\n");
     printf("5 - População\n");
-    printf("Digite o número do atributo escolhido (1-5): ");
+    printf("6 - pontosturisticos\n");
+    printf("Digite o número do atributo escolhido (1-6): ");
     scanf("%d", &atributocomparacao);
 
     // Comparação do atributo das Cartas:
@@ -144,6 +145,13 @@ int main() {
             printf("Carta 2: %s (%s): %lu habitantes\n", cidade2, estado2, populacao2);
             printf("Carta %d (%s) venceu com maior população: %lu habitantes.\n", (populacao1 > populacao2) ? 1 : 2, (populacao1 > populacao2) ? cidade1 : cidade2, (populacao1 > populacao2) ? populacao1 : populacao2);
             break;
+
+        case 6: // Compara os Pontos Turísticos
+            printf("\nComparação de cartas (Atributo: Pontos turísticos):\n");
+            printf("Carta 1 - %s (%s): %d pontos turísticos\n", cidade1, estado1, pontos_turisticos1);
+            printf("Carta 2 - %s (%s): %d pontos turísticos\n", cidade2, estado2, pontos_turisticos2);
+            printf("Carta %d (%s) venceu com maior número de pontos turísticos: %d.\n", (pontos_turisticos1 > pontos_turisticos2) ? 1 : 2, (pontos_turisticos1 > pontos_turisticos2) ? cidade1 : cidade2, (pontos_turisticos1 > pontos_turisticos2) ? pontos_turisticos1 : pontos_turisticos2);
+            break;   
 
         default:
             printf("Opção inválida\n");
